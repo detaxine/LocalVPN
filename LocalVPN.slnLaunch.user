@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Yeni Profil",
+    "Projects": [
+      {
+        "Path": "LocalVPN\\LocalVPN.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "LocalVPN.WUI\\LocalVPN.WUI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

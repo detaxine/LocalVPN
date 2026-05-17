@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="LocalVPN.WUI/LocalVPN.WUI.csproj" Id="833461e6-b3cc-4ded-bc3f-c5f7657b849e" />
+  <Project Path="LocalVPN/LocalVPN.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>
