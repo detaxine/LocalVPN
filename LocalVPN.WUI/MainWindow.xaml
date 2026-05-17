@@ -1,0 +1,106 @@
+﻿<Window x:Class="LocalVPN.WUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LocalVPN - Golden Shield Edition" Height="650" Width="520"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Icon="app_icon.ico">
+
+    <Grid MouseLeftButtonDown="TitleBar_MouseLeftButtonDown" Cursor="SizeAll">
+
+        <Path Stroke="#3E2723" StrokeThickness="4" 
+              Data="M 0,120 C 0,40 70,0 260,0 C 450,0 520,40 520,120 C 520,380 370,610 260,680 C 150,610 0,380 0,120 Z" >
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE57F" Offset="0"/>
+                    <GradientStop Color="#D4AF37" Offset="0.4"/>
+                    <GradientStop Color="#AA7C11" Offset="0.8"/>
+                    <GradientStop Color="#5D4037" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+            <Path.Effect>
+                <DropShadowEffect BlurRadius="25" Direction="315" ShadowDepth="12" Opacity="0.6" Color="Black"/>
+            </Path.Effect>
+        </Path>
+
+        <Path Stroke="#FFE57F" StrokeThickness="1" Opacity="0.5" Margin="6"
+              Data="M 0,120 C 0,40 70,0 260,0 C 450,0 520,40 520,120 C 520,380 370,610 260,680 C 150,610 0,380 0,120 Z"/>
+
+        <Path Stroke="#3E2723" StrokeThickness="1.5" Opacity="0.4" Margin="14"
+              Data="M 0,120 C 0,40 70,0 260,0 C 450,0 520,40 520,120 C 520,380 370,610 260,680 C 150,610 0,380 0,120 Z"/>
+
+        <Grid Margin="35,45,35,55">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Margin="0,-25,5,0">
+                <Button Content="─" Width="28" Height="28" Background="Transparent" Foreground="#3E2723" BorderThickness="0" Cursor="Hand" FontWeight="Bold" Click="BtnMinimize_Click"/>
+                <Button Content="✕" Width="28" Height="28" Background="Transparent" Foreground="#3E2723" BorderThickness="0" Cursor="Hand" FontWeight="Bold" Click="BtnClose_Click"/>
+            </StackPanel>
+
+            <Grid Grid.Row="0" Margin="0,15,0,15" HorizontalAlignment="Center" Width="380" Height="65">
+                <Rectangle RadiusX="12" RadiusY="12" Fill="#1565C0" Stroke="#3E2723" StrokeThickness="2.5">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="6" Direction="270" ShadowDepth="3" Opacity="0.4" Color="Black"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+                <TextBlock Text="LOCALVPN" FontSize="28" FontWeight="Black" Foreground="#3E2723" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="1" Direction="45" ShadowDepth="1.5" Opacity="0.8" Color="#FFE57F"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+
+            <StackPanel Grid.Row="1" Margin="0,10,0,20">
+                <TextBlock Text="DIGITAL SECURITY" FontSize="22" FontWeight="Bold" Foreground="#3E2723" HorizontalAlignment="Center" TextAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="2" Direction="135" ShadowDepth="2" Opacity="0.3" Color="#FFE57F"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </StackPanel>
+
+            <Border Grid.Row="2" Background="#FFFDD0" CornerRadius="6" Padding="12" Margin="25,0,25,15" BorderBrush="#3E2723" BorderThickness="2">
+                <TextBlock x:Name="TxtStatus" Text="UNPROTECTED - DISCONNECTED" FontSize="13" FontWeight="Bold" Foreground="#B71C1C" HorizontalAlignment="Center"/>
+            </Border>
+
+            <StackPanel Grid.Row="3" Margin="25,0,25,15">
+                <TextBlock Text="SELECT OPERATIONAL NODE:" Foreground="#3E2723" FontSize="11" FontWeight="Bold" Margin="4,0,0,4"/>
+                <ComboBox x:Name="CboCountries" SelectedIndex="0" Background="#FFFDD0" BorderBrush="#3E2723" BorderThickness="1.5" Padding="8">
+                    <ComboBoxItem Content="Frankfurt (DE) - Secure Agency Node"/>
+                    <ComboBoxItem Content="New York (US) - Secure Agency Node"/>
+                    <ComboBoxItem Content="London (UK) - Secure Agency Node"/>
+                </ComboBox>
+
+                <Button x:Name="BtnConnect" Content="ACTIVATE THE SECURITY" 
+                        Background="#3E2723" Foreground="#FFE57F" FontSize="14" FontWeight="Bold" 
+                        Padding="12" Margin="0,15,0,0" Cursor="Hand" Click="BtnConnect_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+            <GroupBox Grid.Row="4" Header="DATA STREAM PIPELINE" Margin="20,0,20,10" Foreground="#3E2723" FontWeight="Bold" FontSize="10" BorderBrush="#3E2723">
+                <TextBox x:Name="TxtLog" Background="#C6A123" Foreground="#211512" BorderThickness="0" 
+                         VerticalScrollBarVisibility="Auto" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Consolas" FontSize="11" Padding="8"/>
+            </GroupBox>
+
+            <Grid Grid.Row="5" Margin="0,5,0,-35" HorizontalAlignment="Center" Width="240" Height="45">
+                <Rectangle RadiusX="8" RadiusY="8" Fill="#1565C0" Stroke="#3E2723" StrokeThickness="2">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="4" Direction="270" ShadowDepth="2" Opacity="0.5" Color="Black"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+                <TextBlock Text="by dexy" FontSize="14" FontWeight="Bold" Foreground="#FFE57F" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
