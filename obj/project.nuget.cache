@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "QAT1eWLJLdw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fatma\\source\\repos\\LocalVPN\\LocalVPN\\LocalVPN.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0\\microsoft.extensions.dependencyinjection.10.0.0.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.extensions.logging\\10.0.0\\microsoft.extensions.logging.10.0.0.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0\\microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.extensions.options\\10.0.0\\microsoft.extensions.options.10.0.0.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.0\\microsoft.extensions.primitives.10.0.0.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.visualstudio.threading.only\\17.14.15\\microsoft.visualstudio.threading.only.17.14.15.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\microsoft.visualstudio.validation\\17.8.8\\microsoft.visualstudio.validation.17.8.8.nupkg.sha512",
+    "C:\\Users\\fatma\\.nuget\\packages\\netwintun\\1.0.4\\netwintun.1.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
